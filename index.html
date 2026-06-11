@@ -7,23 +7,47 @@
   <title>FSC | Industrial Services & Manpower Supply in Saudi Arabia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <a href="tel:+966532163156">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +966 53 216 3156
+        </a>
+        <a href="mailto:info@fsccontsa.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@fsccontsa.com
+        </a>
+      </div>
+      <div class="topbar__right">
+        <span>Al-Jubail, Kingdom of Saudi Arabia</span>
+        <span class="topbar__divider">|</span>
+        <span>Saudi Vision 2030 Partner</span>
+      </div>
+    </div>
+  </div>
 
   <!-- Header -->
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#" class="logo">
-        <span class="logo__mark">F</span><span class="logo__text">SC</span>
-        <span class="logo__sub">Falah Saud Alyami Co.</span>
+        <img src="assets/images/logo.png" alt="FSC Logo" class="logo__img">
+        <div class="logo__text-wrap">
+          <span class="logo__name">Falah Saud Alyami Co.</span>
+          <span class="logo__tagline">Industrial Services &amp; Manpower</span>
+        </div>
       </a>
       <nav class="nav" id="nav">
         <ul class="nav__list">
           <li><a href="#home" class="nav__link active">Home</a></li>
           <li class="nav__dropdown">
-            <a href="#services" class="nav__link">Our Services</a>
+            <a href="#services" class="nav__link">Services <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></a>
             <ul class="nav__submenu">
               <li><a href="#electrical">Electrical Services</a></li>
               <li><a href="#mechanical">Mechanical Services</a></li>
@@ -33,8 +57,9 @@
               <li><a href="#instrument">Instrument Services</a></li>
             </ul>
           </li>
-          <li><a href="#about" class="nav__link">About Us</a></li>
-          <li><a href="#contact" class="nav__link">Contact Us</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#gallery" class="nav__link">Projects</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
       <a href="#contact" class="btn btn--primary header__cta">Get A Quote</a>
@@ -44,106 +69,197 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Slider -->
   <section class="hero" id="home">
-    <div class="hero__bg"></div>
-    <div class="hero__overlay"></div>
-    <div class="container hero__content">
-      <div class="hero__badge">Saudi Vision 2030 Partner</div>
-      <h1 class="hero__title">Industrial Services &amp; Manpower Supply — <span>Just One Click Away</span></h1>
-      <p class="hero__desc">End-to-end mechanical, electrical, civil, instrument, scaffolding, and certified manpower solutions delivered on time, in full legal compliance, across Saudi Arabia and the Gulf region.</p>
-      <div class="hero__actions">
-        <a href="#services" class="btn btn--primary btn--lg">Our Services</a>
-        <a href="#contact" class="btn btn--outline btn--lg">Get a Quotation</a>
+    <div class="hero__slider" id="heroSlider">
+      <div class="hero__slide active" data-slide="0">
+        <div class="hero__slide-bg" style="background-image:url('assets/images/hero-refinery.jpg')"></div>
+        <div class="hero__slide-overlay"></div>
+        <div class="container hero__slide-content">
+          <span class="hero__badge">Saudi Vision 2030 Partner</span>
+          <h1 class="hero__title">Industrial Services &amp; Manpower Supply</h1>
+          <p class="hero__desc">End-to-end mechanical, electrical, civil, instrument, scaffolding, and certified manpower solutions — delivered on time, in full compliance, across Saudi Arabia.</p>
+          <div class="hero__actions">
+            <a href="#services" class="btn btn--primary btn--lg">Explore Services</a>
+            <a href="#contact" class="btn btn--outline btn--lg">Get a Quotation</a>
+          </div>
+        </div>
       </div>
+      <div class="hero__slide" data-slide="1">
+        <div class="hero__slide-bg" style="background-image:url('assets/images/hero-industrial.jpg')"></div>
+        <div class="hero__slide-overlay"></div>
+        <div class="container hero__slide-content">
+          <span class="hero__badge">Oil &amp; Gas · Petrochemical</span>
+          <h1 class="hero__title">Making Your Vision <span>Come True</span></h1>
+          <p class="hero__desc">Trusted partner for leading developers, contractors, and EPC firms across the Kingdom of Saudi Arabia and the Gulf region.</p>
+          <div class="hero__actions">
+            <a href="#about" class="btn btn--primary btn--lg">About FSC</a>
+            <a href="#gallery" class="btn btn--outline btn--lg">View Projects</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__slide" data-slide="2">
+        <div class="hero__slide-bg" style="background-image:url('assets/images/hero-mechanical.jpg')"></div>
+        <div class="hero__slide-overlay"></div>
+        <div class="container hero__slide-content">
+          <span class="hero__badge">Mechanical &amp; Industrial</span>
+          <h1 class="hero__title">Best Solutions in <span>Machinery Science</span></h1>
+          <p class="hero__desc">Plant maintenance, equipment overhauling, and industrial service solutions for oil &amp; gas and petrochemical facilities.</p>
+          <div class="hero__actions">
+            <a href="#mechanical" class="btn btn--primary btn--lg">Our Expertise</a>
+            <a href="#contact" class="btn btn--outline btn--lg">Request Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__slide" data-slide="3">
+        <div class="hero__slide-bg" style="background-image:url('assets/images/hero-scaffolding.jpg')"></div>
+        <div class="hero__slide-overlay"></div>
+        <div class="container hero__slide-content">
+          <span class="hero__badge">Scaffolding &amp; Construction</span>
+          <h1 class="hero__title">Quality Matters — <span>We Believe in Quality</span></h1>
+          <p class="hero__desc">Complete scaffolding solutions for power plants, refineries, chemical plants, and high-rise construction projects.</p>
+          <div class="hero__actions">
+            <a href="#scaffolding" class="btn btn--primary btn--lg">Scaffolding Services</a>
+            <a href="#contact" class="btn btn--outline btn--lg">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__controls">
+      <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="Previous slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="hero__dots" id="heroDots">
+        <button class="hero__dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="hero__dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="hero__dot" data-slide="2" aria-label="Slide 3"></button>
+        <button class="hero__dot" data-slide="3" aria-label="Slide 4"></button>
+      </div>
+      <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="Next slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
     </div>
     <div class="hero__features">
       <div class="container hero__features-grid">
         <div class="hero__feature">
-          <div class="hero__feature-icon">⚡</div>
-          <p>Skilled Manpower Across Construction, Oil &amp; Gas, and Industrial Sectors</p>
+          <div class="hero__feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <p>Skilled Manpower Across Construction, Oil &amp; Gas</p>
         </div>
         <div class="hero__feature">
-          <div class="hero__feature-icon">🔧</div>
-          <p>Certified Equipment &amp; Licensed Operators — Ready for Deployment</p>
+          <div class="hero__feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <p>Certified Equipment &amp; Licensed Operators</p>
         </div>
         <div class="hero__feature">
-          <div class="hero__feature-icon">🛡️</div>
-          <p>Full QHSE Compliance &amp; Proactive Safety Management</p>
+          <div class="hero__feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <p>Full QHSE Compliance &amp; Safety Management</p>
         </div>
         <div class="hero__feature">
-          <div class="hero__feature-icon">🚀</div>
-          <p>Fast Mobilization Across Saudi Arabia and the Gulf</p>
+          <div class="hero__feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <p>Fast Mobilization Across Saudi Arabia</p>
         </div>
         <div class="hero__feature">
-          <div class="hero__feature-icon">🏗️</div>
-          <p>Trusted by Leading Developers, Contractors, and EPC Firms</p>
+          <div class="hero__feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <p>Trusted by Leading EPC Firms &amp; Contractors</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Overview -->
-  <section class="section services-overview" id="services">
+  <!-- Services -->
+  <section class="section services" id="services">
     <div class="container">
-      <div class="section__header">
+      <div class="section__header section__header--center">
         <span class="section__label">What We Deliver</span>
-        <h2 class="section__title">Skilled Workforce &amp; Industrial Services</h2>
+        <h2 class="section__title">Our Core Services</h2>
         <p class="section__desc">Comprehensive contracting solutions delivered on time, fully compliant, and ready for deployment across Saudi Arabia and the Gulf region.</p>
       </div>
       <div class="services-grid">
         <article class="service-card" id="electrical">
-          <div class="service-card__img" style="background-image:url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80')"></div>
+          <div class="service-card__img-wrap">
+            <img src="assets/images/service-electricity.jpg" alt="Electrical Services" class="service-card__img">
+            <div class="service-card__overlay">
+              <a href="#electrical-detail" class="service-card__btn">View Details</a>
+            </div>
+          </div>
           <div class="service-card__body">
-            <span class="service-card__num">01.</span>
+            <span class="service-card__num">01</span>
             <h3>Electrical Services</h3>
-            <p>Complete electrical EPC &amp; maintenance of industrial &amp; plant facilities including MV/LV networks, substations, fire alarm, CCTV, and UPS systems.</p>
-            <a href="#electrical-detail" class="service-card__link">Read more →</a>
+            <p>Complete electrical EPC &amp; maintenance including MV/LV networks, substations, fire alarm, CCTV, and UPS systems.</p>
           </div>
         </article>
         <article class="service-card" id="mechanical">
-          <div class="service-card__img" style="background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80')"></div>
+          <div class="service-card__img-wrap">
+            <img src="assets/images/service-mechanics.jpg" alt="Mechanical Services" class="service-card__img">
+            <div class="service-card__overlay">
+              <a href="#mechanical-detail" class="service-card__btn">View Details</a>
+            </div>
+          </div>
           <div class="service-card__body">
-            <span class="service-card__num">02.</span>
+            <span class="service-card__num">02</span>
             <h3>Mechanical Services</h3>
-            <p>Industrial mechanical solutions including plant maintenance, equipment overhauling, and rehabilitation for oil &amp; gas and petrochemical facilities.</p>
-            <a href="#mechanical-detail" class="service-card__link">Read more →</a>
+            <p>Industrial mechanical solutions including plant maintenance, equipment overhauling for oil &amp; gas facilities.</p>
           </div>
         </article>
         <article class="service-card" id="manpower">
-          <div class="service-card__img" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80')"></div>
+          <div class="service-card__img-wrap">
+            <img src="assets/images/service-manpower.jpg" alt="Manpower Supply" class="service-card__img">
+            <div class="service-card__overlay">
+              <a href="#manpower-detail" class="service-card__btn">View Details</a>
+            </div>
+          </div>
           <div class="service-card__body">
-            <span class="service-card__num">03.</span>
+            <span class="service-card__num">03</span>
             <h3>Manpower Supply</h3>
-            <p>Full-service recruitment across construction and oil &amp; gas with fast mobilization, skilled and unskilled labor, and safety officers.</p>
-            <a href="#manpower-detail" class="service-card__link">Read more →</a>
+            <p>Full-service recruitment with fast mobilization, skilled and unskilled labor, and safety officers.</p>
           </div>
         </article>
         <article class="service-card" id="civil">
-          <div class="service-card__img" style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80')"></div>
+          <div class="service-card__img-wrap">
+            <img src="assets/images/service-civil.jpg" alt="Civil Construction" class="service-card__img">
+            <div class="service-card__overlay">
+              <a href="#civil-detail" class="service-card__btn">View Details</a>
+            </div>
+          </div>
           <div class="service-card__body">
-            <span class="service-card__num">04.</span>
+            <span class="service-card__num">04</span>
             <h3>Civil Construction</h3>
-            <p>Comprehensive civil construction services for industrial, commercial, and infrastructure projects across the Kingdom.</p>
-            <a href="#civil-detail" class="service-card__link">Read more →</a>
+            <p>Comprehensive civil construction for industrial, commercial, and infrastructure projects across the Kingdom.</p>
           </div>
         </article>
         <article class="service-card" id="scaffolding">
-          <div class="service-card__img" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80')"></div>
+          <div class="service-card__img-wrap">
+            <img src="assets/images/service-scaffolding.jpg" alt="Scaffolding Services" class="service-card__img">
+            <div class="service-card__overlay">
+              <a href="#scaffolding-detail" class="service-card__btn">View Details</a>
+            </div>
+          </div>
           <div class="service-card__body">
-            <span class="service-card__num">05.</span>
+            <span class="service-card__num">05</span>
             <h3>Scaffolding Services</h3>
-            <p>Rental, sales, and servicing of scaffolding for power plants, refineries, chemical plants, and high-rise construction projects.</p>
-            <a href="#scaffolding-detail" class="service-card__link">Read more →</a>
+            <p>Rental, sales, and servicing of scaffolding for power plants, refineries, and high-rise projects.</p>
           </div>
         </article>
         <article class="service-card" id="instrument">
-          <div class="service-card__img" style="background-image:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80')"></div>
+          <div class="service-card__img-wrap">
+            <img src="assets/images/service-instrument.jpg" alt="Instrument Services" class="service-card__img">
+            <div class="service-card__overlay">
+              <a href="#instrument-detail" class="service-card__btn">View Details</a>
+            </div>
+          </div>
           <div class="service-card__body">
-            <span class="service-card__num">06.</span>
-            <h3>Instrument &amp; Industrial Service</h3>
-            <p>Industrial instrumentation, plant maintenance, and equipment rental with experienced technicians and operators.</p>
-            <a href="#instrument-detail" class="service-card__link">Read more →</a>
+            <span class="service-card__num">06</span>
+            <h3>Instrument &amp; Industrial</h3>
+            <p>Industrial instrumentation, plant maintenance, and equipment rental with experienced technicians.</p>
           </div>
         </article>
       </div>
@@ -151,43 +267,50 @@
   </section>
 
   <!-- Service Details -->
-  <section class="section section--gray service-details">
+  <section class="section section--alt service-details">
     <div class="container">
-      <div class="detail-block" id="electrical-detail">
-        <div class="detail-block__header">
-          <h3>Electrical EPC &amp; Maintenance</h3>
-          <p>We undertake complete electrical EPC &amp; maintenance of industrial &amp; plant facilities:</p>
+      <div class="details-grid">
+        <div class="detail-card" id="electrical-detail">
+          <div class="detail-card__visual">
+            <img src="assets/images/electrical-1.jpg" alt="Electrical work">
+            <img src="assets/images/electrical-2.jpg" alt="Electrical panel">
+          </div>
+          <div class="detail-card__content">
+            <span class="section__label">Electrical EPC</span>
+            <h3>Complete Electrical EPC &amp; Maintenance</h3>
+            <p>We undertake complete electrical EPC &amp; maintenance of industrial &amp; plant facilities:</p>
+            <ul class="detail-list">
+              <li>MV/LV cables underground and overhead networks</li>
+              <li>Control &amp; Fiber Optic Cable systems</li>
+              <li>Industrial &amp; plant lighting, road/street lighting</li>
+              <li>MV/LV sub-stations, transformers, motors, switchgears</li>
+              <li>Overhauling and rehabilitation of electrical equipment</li>
+              <li>Fire alarm, CCTV, security and access control</li>
+              <li>Industrial battery banks, charger unit and UPS systems</li>
+            </ul>
+          </div>
         </div>
-        <ul class="detail-list">
-          <li>MV/LV cables underground and overhead networks</li>
-          <li>Control &amp; Fiber Optic Cable systems</li>
-          <li>Industrial &amp; plant lighting, road/street lighting, building lightings</li>
-          <li>MV/LV sub-stations, power/distribution transformers, motors, switchgears, RMU, MCCS, panels</li>
-          <li>Overhauling and rehabilitation of all kinds of electrical equipment</li>
-          <li>Cable management system</li>
-          <li>Lightning protection and earthing system</li>
-          <li>Fire alarm, CCTV, audio visual, public address, security and access control system</li>
-          <li>Telecommunication and management system</li>
-          <li>Industrial battery banks, charger unit and UPS systems</li>
-        </ul>
-      </div>
-      <div class="detail-block" id="scaffolding-detail">
-        <div class="detail-block__header">
-          <h3>Scaffolding Services</h3>
-          <p>We provide the rental, sales and servicing of nationally marketed construction products:</p>
+        <div class="detail-card detail-card--reverse" id="scaffolding-detail">
+          <div class="detail-card__visual">
+            <img src="assets/images/scaffolding-work.jpg" alt="Scaffolding services">
+            <img src="assets/images/scaffolding-site.jpg" alt="Scaffolding construction">
+          </div>
+          <div class="detail-card__content">
+            <span class="section__label">Scaffolding</span>
+            <h3>Scaffolding Services</h3>
+            <p>Rental, sales and servicing of nationally marketed construction products:</p>
+            <ul class="detail-list detail-list--cols">
+              <li>Power plants scaffolding</li>
+              <li>Chemical plants scaffolding</li>
+              <li>Refinery scaffolding</li>
+              <li>System scaffolding</li>
+              <li>Frame and brace scaffolding</li>
+              <li>Tube and clamp scaffolding</li>
+              <li>Suspended platforms</li>
+              <li>High rises — swing stage</li>
+            </ul>
+          </div>
         </div>
-        <ul class="detail-list detail-list--cols">
-          <li>Power plants scaffolding</li>
-          <li>Chemical plants scaffolding</li>
-          <li>Refinery scaffolding</li>
-          <li>Exterior walls — multiple trades</li>
-          <li>System scaffolding</li>
-          <li>Frame and brace scaffolding</li>
-          <li>Tube and clamp scaffolding</li>
-          <li>Suspended platforms</li>
-          <li>High rises — swing stage</li>
-          <li>Scaffold labor for installation &amp; removal</li>
-        </ul>
       </div>
     </div>
   </section>
@@ -195,9 +318,14 @@
   <!-- About -->
   <section class="section about" id="about">
     <div class="container about__grid">
-      <div class="about__image">
-        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80" alt="Industrial facility in Saudi Arabia">
-        <div class="about__image-badge">
+      <div class="about__visual">
+        <div class="about__img-main">
+          <img src="assets/images/team-planning.jpg" alt="FSC team planning">
+        </div>
+        <div class="about__img-secondary">
+          <img src="assets/images/safety-equipment.jpg" alt="Safety equipment">
+        </div>
+        <div class="about__badge">
           <strong>14+</strong>
           <span>Years of Excellence</span>
         </div>
@@ -205,7 +333,7 @@
       <div class="about__content">
         <span class="section__label">Who We Are</span>
         <h2 class="section__title">About FSC</h2>
-        <p><strong>Falah Saud Alyami Co. (FSC)</strong> is a trusted Saudi-owned contracting establishment and well-reputed service provider operating across industrial, construction, civil, and commercial sectors in the Kingdom of Saudi Arabia.</p>
+        <p class="about__lead"><strong>Falah Saud Alyami Co. (FSC)</strong> is a trusted Saudi-owned contracting establishment operating across industrial, construction, civil, and commercial sectors in the Kingdom of Saudi Arabia.</p>
         <p>With deep experience in construction manpower deployment and certified industrial operations, we help leading developers and contractors execute projects efficiently, legally, and on schedule.</p>
         <ul class="check-list">
           <li>Skilled and unskilled workforce supply</li>
@@ -213,35 +341,76 @@
           <li>End-to-end plant maintenance and industrial services</li>
           <li>Full QHSE management systems</li>
         </ul>
-        <a href="#contact" class="btn btn--primary">Learn More</a>
+        <a href="#contact" class="btn btn--primary">Get In Touch</a>
       </div>
     </div>
   </section>
 
   <!-- Vision & Mission -->
-  <section class="section section--dark vision-mission">
+  <section class="section section--dark values">
     <div class="container">
-      <div class="vm-grid">
-        <div class="vm-card">
-          <div class="vm-card__icon">👁️</div>
+      <div class="section__header section__header--center section__header--light">
+        <span class="section__label">Our Foundation</span>
+        <h2 class="section__title">Vision, Mission &amp; Values</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
           <h3>Our Vision</h3>
-          <p>FSC is resolutely focused on emerging among the leading and highly successful industrial service companies in the Kingdom of Saudi Arabia, creating goodwill and reputation based on excellence in fast, reliable &amp; advanced services and solutions.</p>
+          <p>To emerge among the leading industrial service companies in Saudi Arabia, creating goodwill based on excellence in fast, reliable &amp; advanced services.</p>
         </div>
-        <div class="vm-card">
-          <div class="vm-card__icon">🎯</div>
+        <div class="value-card">
+          <div class="value-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
           <h3>Our Mission</h3>
-          <p>We endeavour to provide our clients consistently excellent service, at highly competitive prices without compromise on quality.</p>
+          <p>Provide clients consistently excellent service at highly competitive prices without compromise on quality.</p>
         </div>
-        <div class="vm-card">
-          <div class="vm-card__icon">⭐</div>
+        <div class="value-card">
+          <div class="value-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
           <h3>Our Quality</h3>
-          <p>Dedicated to a never-ending commitment for excellence in the quality of our products and services. We consistently meet customer requirements in terms of quality, on-time delivery, reliability and performance.</p>
+          <p>Never-ending commitment for excellence. We consistently meet customer requirements in quality, on-time delivery, reliability and performance.</p>
         </div>
-        <div class="vm-card">
-          <div class="vm-card__icon">🦺</div>
+        <div class="value-card">
+          <div class="value-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
           <h3>Our Safety</h3>
-          <p>Safety begins with teamwork. We believe accidents are waiting to happen — that's why we are proactive rather than reactive, committed to implementing QHSE Management Systems.</p>
+          <p>Safety begins with teamwork. We are proactive rather than reactive, committed to implementing QHSE Management Systems.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery / Projects -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section__header section__header--center">
+        <span class="section__label">Our Work</span>
+        <h2 class="section__title">Projects &amp; Equipment</h2>
+        <p class="section__desc">A glimpse of our industrial operations, equipment fleet, and project deployments across Saudi Arabia.</p>
+      </div>
+      <div class="gallery__slider-wrap">
+        <div class="gallery__track" id="galleryTrack">
+          <div class="gallery__item"><img src="assets/images/gallery-refinery.jpg" alt="Refinery project"></div>
+          <div class="gallery__item"><img src="assets/images/gallery-crane.jpg" alt="Crane equipment"></div>
+          <div class="gallery__item"><img src="assets/images/gallery-excavator.jpg" alt="Excavator"></div>
+          <div class="gallery__item"><img src="assets/images/gallery-mechanical.jpg" alt="Mechanical work"></div>
+          <div class="gallery__item"><img src="assets/images/gallery-construction.jpg" alt="Civil construction"></div>
+          <div class="gallery__item"><img src="assets/images/gallery-electrical.jpg" alt="Electrical installation"></div>
+          <div class="gallery__item"><img src="assets/images/gallery-equipment.jpg" alt="Loader equipment"></div>
+          <div class="gallery__item"><img src="assets/images/gallery-team.jpg" alt="Manpower team"></div>
+        </div>
+        <button class="gallery__arrow gallery__arrow--prev" id="galleryPrev" aria-label="Previous">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="gallery__arrow gallery__arrow--next" id="galleryNext" aria-label="Next">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
       </div>
     </div>
   </section>
@@ -256,33 +425,25 @@
       </div>
       <div class="why-grid">
         <div class="why-card">
-          <div class="why-card__icon">🏆</div>
+          <div class="why-card__num">01</div>
           <h4>Trusted Regional Expertise</h4>
           <p>Years of workforce and industrial service supply across the GCC with proven track record on major projects.</p>
         </div>
         <div class="why-card">
-          <div class="why-card__icon">✅</div>
+          <div class="why-card__num">02</div>
           <h4>Certified &amp; Compliant</h4>
           <p>All personnel and equipment meet strict safety standards with full QHSE management systems in place.</p>
         </div>
         <div class="why-card">
-          <div class="why-card__icon">⚡</div>
+          <div class="why-card__num">03</div>
           <h4>Fast Mobilization</h4>
           <p>Rapid deployment to project sites across the Kingdom — on time and fully compliant.</p>
         </div>
         <div class="why-card">
-          <div class="why-card__icon">📦</div>
+          <div class="why-card__num">04</div>
           <h4>Complete Service Package</h4>
           <p>From sourcing and technical services to site deployment — handled under one roof.</p>
         </div>
-      </div>
-      <div class="why-tags">
-        <span>Certified Equipment</span>
-        <span>Skilled Manpower</span>
-        <span>Legal Compliance</span>
-        <span>Plant Maintenance</span>
-        <span>Scaffolding Solutions</span>
-        <span>Industrial Services</span>
       </div>
     </div>
   </section>
@@ -290,64 +451,67 @@
   <!-- Stats -->
   <section class="section stats">
     <div class="container">
-      <div class="section__header section__header--center section__header--light">
-        <span class="section__label">Our Success</span>
-        <h2 class="section__title">What We Have Delivered</h2>
-        <p class="section__desc">With certified resources, legal compliance, and regional reach, FSC delivers services you can count on.</p>
-      </div>
       <div class="stats-grid">
-        <div class="stat-card">
-          <span class="stat-card__num" data-target="500">0</span><span class="stat-card__suffix">+</span>
+        <div class="stat-item">
+          <span class="stat-item__num" data-target="500">0</span><span class="stat-item__suffix">+</span>
           <p>Workers Mobilized</p>
-          <small>Across construction, oil &amp; gas, and industrial projects from general labor to certified specialists</small>
         </div>
-        <div class="stat-card">
-          <span class="stat-card__num" data-target="6">0</span>
+        <div class="stat-item">
+          <span class="stat-item__num" data-target="6">0</span>
           <p>Core Service Areas</p>
-          <small>Electrical, mechanical, civil, instrument, scaffolding, and manpower supply</small>
         </div>
-        <div class="stat-card">
-          <span class="stat-card__num" data-target="4">0</span><span class="stat-card__suffix">+</span>
-          <p>Key Industries Served</p>
-          <small>Construction, oil &amp; gas, petrochemical, and industrial facilities across Saudi Arabia</small>
+        <div class="stat-item">
+          <span class="stat-item__num" data-target="14">0</span><span class="stat-item__suffix">+</span>
+          <p>Years of Experience</p>
         </div>
-        <div class="stat-card">
-          <span class="stat-card__num" data-target="100">0</span><span class="stat-card__suffix">%</span>
+        <div class="stat-item">
+          <span class="stat-item__num" data-target="100">0</span><span class="stat-item__suffix">%</span>
           <p>Quality Commitment</p>
-          <small>QHSE certified with proactive safety management and on-time delivery</small>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Process -->
-  <section class="section section--gray process">
+  <section class="section section--alt process">
     <div class="container">
       <div class="section__header section__header--center">
         <span class="section__label">How We Work</span>
-        <h2 class="section__title">How We Work Together</h2>
-        <p class="section__desc">Every project has unique workforce and equipment needs. FSC offers flexible, fully compliant solutions — delivered with speed, safety, and efficiency.</p>
+        <h2 class="section__title">Our Process</h2>
+        <p class="section__desc">Flexible, fully compliant solutions — delivered with speed, safety, and efficiency.</p>
       </div>
-      <div class="process-grid">
-        <div class="process-step">
-          <div class="process-step__num">01</div>
-          <h4>Initial Consultation</h4>
-          <p>We assess your manpower or service needs based on project scope, duration, and compliance requirements.</p>
+      <div class="process-timeline">
+        <div class="process-item">
+          <div class="process-item__dot"></div>
+          <div class="process-item__content">
+            <span class="process-item__step">Step 01</span>
+            <h4>Initial Consultation</h4>
+            <p>We assess your manpower or service needs based on project scope, duration, and compliance requirements.</p>
+          </div>
         </div>
-        <div class="process-step">
-          <div class="process-step__num">02</div>
-          <h4>Proposal &amp; Documentation</h4>
-          <p>You receive a clear service proposal with all technical and compliance documentation handled in-house.</p>
+        <div class="process-item">
+          <div class="process-item__dot"></div>
+          <div class="process-item__content">
+            <span class="process-item__step">Step 02</span>
+            <h4>Proposal &amp; Documentation</h4>
+            <p>You receive a clear service proposal with all technical and compliance documentation handled in-house.</p>
+          </div>
         </div>
-        <div class="process-step">
-          <div class="process-step__num">03</div>
-          <h4>Mobilization &amp; Deployment</h4>
-          <p>Skilled professionals and certified equipment are mobilized to your site — on time and fully compliant.</p>
+        <div class="process-item">
+          <div class="process-item__dot"></div>
+          <div class="process-item__content">
+            <span class="process-item__step">Step 03</span>
+            <h4>Mobilization &amp; Deployment</h4>
+            <p>Skilled professionals and certified equipment mobilized to your site — on time and fully compliant.</p>
+          </div>
         </div>
-        <div class="process-step">
-          <div class="process-step__num">04</div>
-          <h4>Project Support &amp; Handover</h4>
-          <p>We stay involved throughout execution, ensuring smooth performance until project completion.</p>
+        <div class="process-item">
+          <div class="process-item__dot"></div>
+          <div class="process-item__content">
+            <span class="process-item__step">Step 04</span>
+            <h4>Project Support &amp; Handover</h4>
+            <p>We stay involved throughout execution, ensuring smooth performance until project completion.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -360,22 +524,47 @@
         <span class="section__label">Testimonials</span>
         <h2 class="section__title">What Our Clients Say</h2>
       </div>
-      <div class="testimonials-grid">
-        <blockquote class="testimonial-card">
-          <p>"FSC's manpower supply helped us complete a high-volume project in Jubail. Their team handled deployment professionally and delivered on schedule."</p>
-          <footer>
-            <strong>Project Manager</strong>
-            <span>Construction Firm, Eastern Province</span>
-          </footer>
-        </blockquote>
-        <blockquote class="testimonial-card">
-          <p>"We rely on FSC for both scaffolding services and technical staff. Their operators are certified, and their mobilization is always on time."</p>
-          <footer>
-            <strong>Operations Head</strong>
-            <span>Oil &amp; Gas EPC, Saudi Arabia</span>
-          </footer>
-        </blockquote>
+      <div class="testimonials-slider" id="testimonialSlider">
+        <div class="testimonial-slide active">
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.15"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            </div>
+            <p>"FSC's manpower supply helped us complete a high-volume project in Jubail. Their team handled deployment professionally and delivered on schedule."</p>
+            <footer>
+              <strong>Project Manager</strong>
+              <span>Construction Firm, Eastern Province</span>
+            </footer>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.15"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            </div>
+            <p>"We rely on FSC for both scaffolding services and technical staff. Their operators are certified, and their mobilization is always on time."</p>
+            <footer>
+              <strong>Operations Head</strong>
+              <span>Oil &amp; Gas EPC, Saudi Arabia</span>
+            </footer>
+          </div>
+        </div>
       </div>
+      <div class="testimonials-dots" id="testimonialDots">
+        <button class="testimonials-dot active" data-slide="0"></button>
+        <button class="testimonials-dot" data-slide="1"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="cta-banner__bg" style="background-image:url('assets/images/hero-industrial.jpg')"></div>
+    <div class="cta-banner__overlay"></div>
+    <div class="container cta-banner__content">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Get efficient, compliant, and on-time industrial services across Saudi Arabia.</p>
+      <a href="#contact" class="btn btn--primary btn--lg">Request a Quotation</a>
     </div>
   </section>
 
@@ -384,41 +573,45 @@
     <div class="container contact__grid">
       <div class="contact__info">
         <span class="section__label">Get In Touch</span>
-        <h2 class="section__title">Let's Get Your Project Moving</h2>
-        <p>Efficiently, compliantly, and on time — across Saudi Arabia and the Gulf region.</p>
-        <div class="contact__items">
-          <div class="contact__item">
-            <div class="contact__item-icon">📍</div>
+        <h2 class="section__title">Contact Us</h2>
+        <p>Let's get your project moving efficiently, compliantly, and on time.</p>
+        <div class="contact__cards">
+          <div class="contact__card">
+            <div class="contact__card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
             <div>
-              <strong>Our Location</strong>
+              <strong>Location</strong>
               <p>Al-Jubail, Al-Safat District<br>Kingdom of Saudi Arabia</p>
             </div>
           </div>
-          <div class="contact__item">
-            <div class="contact__item-icon">✉️</div>
-            <div>
-              <strong>Write to us</strong>
-              <p><a href="mailto:info@fsccontsa.com">info@fsccontsa.com</a></p>
+          <div class="contact__card">
+            <div class="contact__card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
-          </div>
-          <div class="contact__item">
-            <div class="contact__item-icon">📞</div>
             <div>
-              <strong>Call us</strong>
+              <strong>Phone</strong>
               <p><a href="tel:+966532163156">+966 53 216 3156</a></p>
             </div>
           </div>
-          <div class="contact__item">
-            <div class="contact__item-icon">🌐</div>
+          <div class="contact__card">
+            <div class="contact__card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
             <div>
-              <strong>Website</strong>
-              <p><a href="https://www.fsccontsa.com" target="_blank" rel="noopener">www.fsccontsa.com</a></p>
+              <strong>Email</strong>
+              <p><a href="mailto:info@fsccontsa.com">info@fsccontsa.com</a></p>
             </div>
           </div>
-        </div>
-        <div class="contact__hours">
-          <strong>Working Hours</strong>
-          <p>Monday – Saturday: 7:30 AM – 5:30 PM<br>Sunday: Closed</p>
+          <div class="contact__card">
+            <div class="contact__card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <strong>Working Hours</strong>
+              <p>Mon – Sat: 7:30 AM – 5:30 PM<br>Sunday: Closed</p>
+            </div>
+          </div>
         </div>
       </div>
       <form class="contact__form" id="contactForm">
@@ -448,7 +641,6 @@
               <option>Civil Construction</option>
               <option>Scaffolding Services</option>
               <option>Instrument Services</option>
-              <option>Industrial Service</option>
             </select>
           </div>
         </div>
@@ -466,27 +658,31 @@
   <footer class="footer">
     <div class="container footer__grid">
       <div class="footer__brand">
-        <a href="#" class="logo logo--footer">
-          <span class="logo__mark">F</span><span class="logo__text">SC</span>
+        <a href="#" class="footer__logo">
+          <img src="assets/images/logo.png" alt="FSC Logo">
+          <div>
+            <span class="footer__name">Falah Saud Alyami Co.</span>
+            <span class="footer__arabic">شركة فلاح سعود اليامي</span>
+          </div>
         </a>
-        <p class="footer__arabic">شركة فلاح سعود اليامي</p>
         <p>Making your vision come true — that is what we do. Quality matters, we do believe in quality.</p>
       </div>
       <div class="footer__links">
-        <h4>Main Menu</h4>
+        <h4>Quick Links</h4>
         <ul>
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Our Services</a></li>
+          <li><a href="#gallery">Projects</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer__links">
-        <h4>Our Services</h4>
+        <h4>Services</h4>
         <ul>
-          <li><a href="#electrical">Electrical Services</a></li>
-          <li><a href="#mechanical">Mechanical Services</a></li>
-          <li><a href="#manpower">Manpower Supply</a></li>
-          <li><a href="#scaffolding">Scaffolding Services</a></li>
+          <li><a href="#electrical">Electrical</a></li>
+          <li><a href="#mechanical">Mechanical</a></li>
+          <li><a href="#manpower">Manpower</a></li>
+          <li><a href="#scaffolding">Scaffolding</a></li>
         </ul>
       </div>
       <div class="footer__contact">
@@ -498,13 +694,16 @@
     </div>
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
-        <p>Copyright © 2026 Falah Saud Alyami Co. (FSC). All Rights Reserved.</p>
-        <div class="footer__vision">
-          <span>Saudi Vision 2030</span>
-        </div>
+        <p>&copy; 2026 Falah Saud Alyami Co. (FSC). All Rights Reserved.</p>
+        <span class="footer__vision">Saudi Vision 2030</span>
       </div>
     </div>
   </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
 
   <script src="js/main.js"></script>
 </body>

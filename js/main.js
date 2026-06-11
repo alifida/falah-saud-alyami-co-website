@@ -4,27 +4,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.getElementById('nav');
   const contactForm = document.getElementById('contactForm');
   const formNote = document.getElementById('formNote');
+  const scrollTop = document.getElementById('scrollTop');
 
-  // Sticky header shadow
+  // ── Header scroll behavior ──
   window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 20);
+    const scrolled = window.scrollY > 40;
+    header.classList.toggle('scrolled', scrolled);
+    scrollTop.classList.toggle('visible', window.scrollY > 500);
   });
 
-  // Mobile nav toggle
+  scrollTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ── Mobile nav ──
   navToggle.addEventListener('click', () => {
     nav.classList.toggle('open');
     navToggle.classList.toggle('active');
+    document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
   });
 
-  // Close mobile nav on link click
   nav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
       navToggle.classList.remove('active');
+      document.body.style.overflow = '';
     });
   });
 
-  // Mobile dropdown toggle
   const dropdown = document.querySelector('.nav__dropdown');
   if (dropdown) {
     dropdown.querySelector('.nav__link').addEventListener('click', (e) => {
@@ -35,11 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Active nav link on scroll
+  // ── Active nav on scroll ──
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav__link');
 
-  const observerNav = new IntersectionObserver((entries) => {
+  const navObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         navLinks.forEach(link => {
@@ -49,18 +56,91 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { rootMargin: '-40% 0px -55% 0px' });
 
-  sections.forEach(section => observerNav.observe(section));
+  sections.forEach(s => navObserver.observe(s));
 
-  // Fade-up animation on scroll
+  // ── Hero Slider ──
+  const heroSlides = document.querySelectorAll('.hero__slide');
+  const heroDots = document.querySelectorAll('.hero__dot');
+  const heroPrev = document.getElementById('heroPrev');
+  const heroNext = document.getElementById('heroNext');
+  let heroIndex = 0;
+  let heroTimer;
+
+  function showHeroSlide(index) {
+    heroIndex = (index + heroSlides.length) % heroSlides.length;
+    heroSlides.forEach((s, i) => s.classList.toggle('active', i === heroIndex));
+    heroDots.forEach((d, i) => d.classList.toggle('active', i === heroIndex));
+  }
+
+  function startHeroAuto() {
+    heroTimer = setInterval(() => showHeroSlide(heroIndex + 1), 6000);
+  }
+
+  function resetHeroAuto() {
+    clearInterval(heroTimer);
+    startHeroAuto();
+  }
+
+  heroPrev.addEventListener('click', () => { showHeroSlide(heroIndex - 1); resetHeroAuto(); });
+  heroNext.addEventListener('click', () => { showHeroSlide(heroIndex + 1); resetHeroAuto(); });
+  heroDots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      showHeroSlide(parseInt(dot.dataset.slide, 10));
+      resetHeroAuto();
+    });
+  });
+  startHeroAuto();
+
+  // ── Gallery Slider ──
+  const galleryTrack = document.getElementById('galleryTrack');
+  const galleryPrev = document.getElementById('galleryPrev');
+  const galleryNext = document.getElementById('galleryNext');
+  let galleryPos = 0;
+
+  function getGalleryShift() {
+    const item = galleryTrack.querySelector('.gallery__item');
+    if (!item) return 0;
+    const gap = 16;
+    return item.offsetWidth + gap;
+  }
+
+  function slideGallery(dir) {
+    const items = galleryTrack.children.length;
+    const visible = window.innerWidth <= 500 ? 1 : window.innerWidth <= 900 ? 2 : 3;
+    const maxPos = Math.max(0, items - visible);
+    galleryPos = Math.max(0, Math.min(maxPos, galleryPos + dir));
+    galleryTrack.style.transform = `translateX(-${galleryPos * getGalleryShift()}px)`;
+  }
+
+  galleryPrev.addEventListener('click', () => slideGallery(-1));
+  galleryNext.addEventListener('click', () => slideGallery(1));
+
+  // ── Testimonial Slider ──
+  const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+  const testimonialDots = document.querySelectorAll('.testimonials-dot');
+  let testimonialIndex = 0;
+
+  function showTestimonial(index) {
+    testimonialIndex = (index + testimonialSlides.length) % testimonialSlides.length;
+    testimonialSlides.forEach((s, i) => s.classList.toggle('active', i === testimonialIndex));
+    testimonialDots.forEach((d, i) => d.classList.toggle('active', i === testimonialIndex));
+  }
+
+  testimonialDots.forEach(dot => {
+    dot.addEventListener('click', () => showTestimonial(parseInt(dot.dataset.slide, 10)));
+  });
+  setInterval(() => showTestimonial(testimonialIndex + 1), 8000);
+
+  // ── Fade-up animations ──
   const fadeElements = document.querySelectorAll(
-    '.service-card, .vm-card, .why-card, .stat-card, .process-step, .testimonial-card, .detail-block'
+    '.service-card, .value-card, .why-card, .stat-item, .process-item, .detail-card, .contact__card'
   );
   fadeElements.forEach(el => el.classList.add('fade-up'));
 
   const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
         fadeObserver.unobserve(entry.target);
       }
     });
@@ -68,8 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fadeElements.forEach(el => fadeObserver.observe(el));
 
-  // Counter animation
-  const counters = document.querySelectorAll('.stat-card__num[data-target]');
+  // ── Counter animation ──
+  const counters = document.querySelectorAll('.stat-item__num[data-target]');
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
@@ -91,9 +171,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.5 });
 
-  counters.forEach(counter => counterObserver.observe(counter));
+  counters.forEach(c => counterObserver.observe(c));
 
-  // Contact form
+  // ── Contact form ──
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     formNote.textContent = 'Thank you! Your message has been received. We will contact you shortly.';
